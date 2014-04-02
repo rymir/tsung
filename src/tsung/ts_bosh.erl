@@ -294,6 +294,7 @@ do_connect(#state{type = Type, host = Host, path = Path, parent_pid = ParentPid}
     ParentPid ! {gen_ts_transport, self(), Resp},
     NewState3#state{rid = Rid +1,
                     open = [],
+                    session_state = normal,
                     sid = get_attr(Attrs, sid),
                     max_requests = 2
                    }.
