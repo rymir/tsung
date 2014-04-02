@@ -475,7 +475,7 @@ export_stats_common(BackEnd, Stats,LastStats,Log)->
                              Stats#stats.finish_users_count,
                              {BackEnd,LastStats#stats.finish_users_count,Log}),
     ts_stats_mon:dumpstats(request),
-    ts_stats_mon:dumpstats(page),
+    % ts_stats_mon:dumpstats(page),
     ts_stats_mon:dumpstats(connect),
     ts_stats_mon:dumpstats(transaction),
     ts_stats_mon:dumpstats().
